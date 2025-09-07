@@ -1,0 +1,1131 @@
+<!-- 
+    
+    - commissions page 'roll deep' by skye southcodes.tumblr.com
+    - modify as you please but please do not touch the credit
+    - any errors? need help? have questions? let me know!
+    southcodes.tumblr.com/inbox
+    
+    - normalize css by https://github.com/necolas
+    - fonts by google
+    - icon font by https://cappuccicons.com/ and http://fontawesome.io/icons/
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{title}</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="shortcut icon" href="{favicon}">
+    <meta name="description" content="{MetaDescription}"/>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- normalize -->
+    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+
+    <!-- font icons -->
+    <link href="https://icons.cappuccicons.com/cpf.css" rel="stylesheet">
+    
+<style>
+:root {
+    --background:#fafafa;
+    --boxes-background: #fff;
+    --text:#333;
+    --links: #a48cdb;
+    --links-hover: #89368c;
+    --accents: rgb(204, 173, 230);
+    --icons: #7b368c;
+    --borders:#eee;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tmblr-iframe {display:none!important;}
+
+::-webkit-scrollbar-thumb:vertical {border-left:2px solid var(--accents);}
+::-webkit-scrollbar {width:6px}
+::-webkit-scrollbar-track-piece{margin:5px 0;}
+
+pre {font-family:consolas;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4- */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;}      /* Internet Explorer 5.5+ */
+
+body, figure{margin:0;padding:0}
+html{font: 14px 'Karla', sans-serif;}
+body {font-size:14px;color:var(--text);background:var(--background);}
+a {text-decoration: none;color:var(--links);word-break:break-word;}
+a:hover {color:var(--links-hover);}
+blockquote {margin:0;padding:0;}
+img {max-width:100%;height: auto;display: block;margin:0}
+hr {border:0;border-top:1px solid var(--borders);margin:0;}
+p {margin:1rem 0;line-height: 160%;}
+h2 {font-size: 1.7rem;margin:0 0 2rem;display: flex;align-items: center;text-transform: capitalize;line-height: 170%;}
+h3 {font-size: 1.5rem;margin:1.5rem 0}
+ol,ul {margin:2rem 0}
+li {margin:.5rem 0 .5rem 3rem;padding-left:1rem}
+li::marker {
+    font-size: 1.1rem;
+    color:var(--accents);
+    font-weight: 900;
+}
+
+ol li {
+    list-style: decimal-leading-zero;}
+
+/* top bar */
+
+#topbar {
+    position: fixed;left:0;right:0;top:0;
+    z-index: 9;
+    border-bottom: 1px solid var(--borders);
+    padding:0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--boxes-background);
+}
+
+#topbar h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    color:var(--accents);
+    margin-top: 2rem;
+}
+
+/* top bar image */
+
+figure.topbar-image {
+    width:3rem;
+    height:3rem;
+}
+
+img.topbar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* top bar navigation */
+
+#page-navigation li{
+    margin:0 1.5rem;
+    display: inline-block;
+}
+
+#page-navigation i {
+    font-size: 1.2rem;
+    color: var(--icons);
+}
+
+/* main content */
+
+#wrapper {
+    width: calc(100% - 17rem);
+    margin:3rem 0 7rem 17rem;
+    padding-top: 8rem;
+}
+
+#wrapper h2:before {
+    content: '\f111';
+    font-family: 'font awesome 5 free';
+    font-weight: 900;
+    color: var(--icons);
+    margin-right: 1rem;
+    font-size: .7rem;
+}
+
+main, header {
+    width:90%;
+    max-width: 40rem;
+    margin:auto;
+}    
+
+#contact,#terms,#cancel,#faq {
+    background-color: var(--boxes-background);
+    border:1px solid var(--borders);
+    padding: 2rem 2rem 3rem;
+}
+
+
+/* header */
+
+#upper-header{
+    background-color: var(--boxes-background);
+    padding: 2rem;
+    border: 1px solid var(--borders);
+}
+
+#page-title {
+    font: 700 1.8rem 'Raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin:2rem 0;
+    letter-spacing: .06rem;
+}
+
+#page-title a {
+    color:var(--text);
+}
+
+#page-title::first-letter {
+    color: var(--accents);
+    font-size: 2.5rem;
+}
+
+#about {
+    text-align: justify;
+    margin-top: 3rem;
+}
+
+#page-links {
+    margin-top: 3rem;
+}
+
+#page-links nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#page-links nav ul li {
+    padding: 7px;
+    border:1px solid #eee;
+    margin:1rem;
+    border-radius: 4px;
+    list-style: none;
+}
+
+
+#page-links nav ul li:hover {
+    background-color: var(--accents);
+}
+
+/* contact */
+
+#contact {
+    padding:3rem
+}
+
+#contact h2 {
+    margin:0 0 3rem;
+}
+
+#socials{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;list-style: none;
+    text-align: center;
+}
+
+#socials li{
+    padding:0;margin:0
+}
+
+#contact #socials .cp {
+    padding: 10px;
+    background-color: var(--boxes-background);
+    font-size: 1.5rem;
+    border-radius: 100%;
+    border:1px solid var(--borders);
+}
+
+/* contact buttons */
+
+#contact-buttons {
+    margin: 3rem 0 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#contact-buttons li {
+    padding:0;margin:0
+}
+
+#contact-buttons li{    
+    background-color: var(--accents);
+    border:0;
+    padding:1rem;
+    margin:1rem 0 0;
+    border-radius: 4px;   
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    font: 600 1rem 'Karla', sans-serif;
+}
+
+#contact-buttons a{
+    color: var(--text);
+}
+
+#contact-buttons i{
+    margin-right: 1rem;
+}
+
+/* sidebar */
+
+aside {
+    position:fixed;top:0;left:0;bottom:0;
+    background-color: var(--boxes-background);
+    border:1px solid var(--borders);
+    overflow: auto;
+    width: 17rem;
+    padding:7rem 2rem 4rem;
+    text-align: right;
+    font-family: 'raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: .05rem;
+}
+
+aside hr {
+    margin:3rem 0   
+}
+
+aside #toggles {
+    margin-bottom: 3rem;
+}
+
+aside #slots-open .slots-taken{
+    color:#aaa;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+aside #slots-open .slots-total{
+    font-size: 1.2rem;
+    color:var(--accents)
+}
+
+#aside-nav li{
+    font-weight: 800;
+    letter-spacing: .07rem;
+}
+
+aside li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin:2rem 0
+}
+
+aside i {
+    font-size: 1.4rem;
+}
+
+aside .fa-toggle-on{
+    color: var(--icons);
+    margin-left:1rem
+} 
+
+aside .fa-toggle-off{
+    color: #aaa;
+    margin-left:1rem
+} 
+
+aside nav li {
+    margin:2rem 0;
+    font-size: .9rem;
+}
+
+/* terms */
+
+#terms .terms-list,#terms .terms-list {
+    margin:3rem 0 
+}
+
+#terms .terms-list li::marker {
+    font-size: 1.1rem;
+    color:var(--accents);
+    font-weight: 900;
+}
+
+#terms ol.terms-list li{
+    list-style: decimal-leading-zero;
+    margin:1rem 0 1rem 2rem;
+    padding-left: 1rem;
+}
+
+#terms ul.terms-list li{
+    margin:1rem 0 1rem 2rem;
+    list-style: disc;
+}
+
+#terms .terms-list li::marker {
+    font-size: 1.1rem;
+    color:var(--accents);
+}
+
+/* how to */
+
+#how-to {
+    background-color: var(--boxes-background);
+    border:1px solid var(--borders);
+    padding: 2rem;
+}
+
+#how-to ol li {
+    list-style: decimal-leading-zero;
+    margin:1rem 0 1rem 2rem;
+    padding-left: 1rem;
+}
+
+#how-to ol {
+    margin-top: 2rem;
+}
+
+#how-to ol li::marker{
+    font-size: 1.1rem;
+    color:var(--accents);
+    font-weight: 900;
+}
+
+/* do's and don'ts */
+
+#do-donts {
+    column-count: 2;
+    column-gap:1rem;
+    margin:4rem 0 2rem;
+    text-align: center;
+}
+
+#do-donts li {
+    margin:0rem 0 2rem;
+    list-style: none;
+}
+
+#do-donts li:last-of-type {
+    margin-bottom: 0;
+}
+
+#do-donts ul,#do-donts ol{
+    margin:0
+}
+
+.dos li:before{
+    content: '\f058';
+    font-family: 'font awesome 5 free';
+    color:green;
+    font-weight: 900;
+    margin-right: 1rem;
+    
+}
+
+.donts li:before{
+    content: '\f057';
+    font-weight: 900;
+    font-family: 'font awesome 5 free';
+    color:red;
+    margin-right: 1rem;
+}
+
+
+/* prices */
+
+#prices {
+    column-count: 2;
+    column-gap: 2rem;
+    padding:0
+}
+
+.example {
+    break-inside: avoid;
+    padding:0;  
+    border: 1px solid var(--borders);
+    background-color: var(--boxes-background);
+    margin-bottom:3rem
+}
+
+.example-image {
+    width: 100%;
+}
+
+.example-info h3 {
+    margin: 0;
+    font:800 1.4rem 'Karla', sans-serif;
+    text-transform: uppercase;
+    line-height: 150%;
+    padding: 1.2rem 1rem;
+    text-align: center ;
+    letter-spacing: .04rem;
+
+    background-color: var(--accents);
+}
+
+.example-price {
+    padding: 1rem;
+    text-align: center ;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 
+    1px 1px 0 var(--accents), 0px 1px 1px var(--accents), 
+    2px 1px 1px var(--accents), 1px 2px 1px var(--accents),
+    3px 2px 1px var(--accents), 2px 3px 1px var(--accents)
+}
+
+.example-type-info {
+    padding: 1rem;
+    border-top: 1px solid var(--borders);
+    font-size: 1.1rem;
+}
+
+/* faq */
+
+#faq {
+    margin:0 0 5rem 
+}
+
+.faq-line {
+    margin:3.5rem 0
+}
+
+.faq-line:last-of-type {margin-bottom: 0;}
+
+.faq-question {
+    background-color: var(--accents);
+    padding:1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.faq-answer {
+    background-color: var(--background);
+    padding:2rem;
+    border:1px solid var(--accents)
+}
+
+/* other */
+
+#ask_form {
+    margin-top:3rem;
+}
+
+
+#to-top {
+    display:none;
+    position:fixed; bottom:5rem;right:2rem;
+    font-size: 1.5rem;
+}
+
+/* footer */
+
+#last-update {
+    position: fixed;left:0;right:0;bottom:0;
+    background-color: var(--accents);
+    padding:  1rem 2rem;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: .04rem;
+    font-size: .8rem;
+}
+
+/* MEDIA */
+
+@media only screen and (min-width:0px) and (max-width:670px) {
+
+    
+    #wrapper {
+        width: calc(100%);
+        margin:3rem 0 7rem 0;
+    }
+
+    aside {
+        position:static;
+        width: 100%;
+        margin-top: 9rem;
+        padding-top:0 ;
+    }
+    
+    aside li {
+        justify-content: normal;
+    }
+        
+    #aside-nav ul {
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+        flex-flow: row;
+        flex-wrap: wrap;
+        margin:0;
+        text-align: center;
+        /* line-height: 300%; */
+    }
+    
+    #aside-nav ul li{
+        padding: 0;margin: 1rem 0;
+        display: inline-block;
+    }
+    
+    #aside-nav ul li:after{
+        content: '\f111';
+        font-family: 'font awesome 5 free';
+        font-weight: 900;
+        color: var(--icons);
+        padding:3px ;
+        margin:0 1rem;
+        font-size: .5rem;
+        vertical-align: middle;
+        border-radius: 100%;
+        border: 1px solid var(--borders);
+    }
+
+    
+    #aside-nav ul li:last-of-type:after{
+        display: none;
+    }
+
+    
+    #prices {
+        column-count: 1;
+        column-gap: 0;
+        padding:0
+    }
+
+}
+</style>
+    
+</head>
+<body id="top">
+
+    <!-- top bar -->
+
+<section id="topbar">
+
+    <!-- icon image -->
+
+    <figure class="topbar-image"><img src="ICON IMAGE URL" alt="" class="topbar-image"></figure>
+    
+    <!-- topbar page title -->
+    <h2><a href="/">roll deep</a></h2>
+
+    <!-- tumblr navigation -->
+    <nav id="page-navigation"><ul>
+
+        <li><a target="_blank" href="https://www.tumblr.com/follow/{name}"><i class="fa-solid fa-plus"></i></a></li>
+        
+        {block:AskEnabled}<li><a target="_blank" href="/ask"><i class="fa-solid fa-envelope"></i></a></li>{/block:AskEnabled}
+        
+        <li><a target="_blank" href="https://www.tumblr.com/dashboard"><i class="fa-brands fa-tumblr"></i></a></li>
+    </ul></nav>
+
+</section>
+
+
+
+<section id="wrapper">
+    
+
+<header>
+
+    <section id="upper-header">
+
+        <!-- page title -->
+
+        <h1 id="page-title"><a href="/">page title</a></h1>  
+
+        <!-- page about -->
+        <article id="about">
+            <p>about text</p>
+        </article>
+
+        <article id="page-links">
+
+            <!-- page links -->
+            <nav><ul>
+                <li><a href="URL">link name</a></li>
+                <li><a href="URL">link name</a></li>
+                <li><a href="URL">link name</a></li>
+                <li><a href="URL">link name</a></li>
+                <li><a href="URL">link name</a></li>
+            </ul></nav>
+        </article>
+        
+    </section>
+
+    
+<aside>
+
+    <!-- sidebar/header open/closed toggles -->
+    
+    <article id="toggles">
+
+        <!-- inbox closed/open -->
+
+        <li>
+            inbox
+            
+            <!-- CHANGE CODE BELOW ACCORDINGLY:
+                
+                IF INBOX CLOSED:
+                
+                <i class="fa-solid fa-toggle-off"></i> 
+            
+                IF INBOX OPEN:
+                
+                <i class="fa-solid fa-toggle-on"></i> 
+            
+            -->
+
+            <i class="fa-solid fa-toggle-on"></i> 
+
+        </li>
+        
+        <!-- slots -->
+
+        <li>
+            slots
+
+        <span id="slots-open">
+            
+            <!-- slots taken -->
+            <span class="slots-taken">0</span>
+            
+            <!-- total of slots -->
+            <span class="slots-total">/8</span>
+
+        </span>
+
+            <!-- CHANGE CODE BELOW ACCORDINGLY:
+                
+                IF SLOTS CLOSED:
+                
+                <i class="fa-solid fa-toggle-off"></i> 
+            
+                IF SLOTS OPEN:
+                
+                <i class="fa-solid fa-toggle-on"></i> 
+            
+            -->
+
+            <i class="fa-solid fa-toggle-off"></i> 
+
+    
+        </li>
+
+        <!-- commissions open/closed -->
+        <li>
+            commissions
+
+          <!-- CHANGE CODE BELOW ACCORDINGLY:
+                
+                IF COMMISSIONS CLOSED:
+                
+                <i class="fa-solid fa-toggle-off"></i> 
+            
+                IF COMMISSIONS OPEN:
+                
+                <i class="fa-solid fa-toggle-on"></i> 
+            
+            -->
+
+            <i class="fa-solid fa-toggle-off"></i> 
+
+        </li>
+        
+        <!-- requests open/closed -->
+        <li>
+
+            requests
+
+              <!-- CHANGE CODE BELOW ACCORDINGLY:
+                
+                IF REQUESTS CLOSED:
+                
+                <i class="fa-solid fa-toggle-off"></i> 
+            
+                IF REQUESTS OPEN:
+                
+                <i class="fa-solid fa-toggle-on"></i> 
+            
+            -->
+
+            <i class="fa-solid fa-toggle-off"></i> 
+
+        </li>
+
+    </article>
+
+    <hr>
+
+    <!-- anchor links navigation within page -->
+
+    <nav id="aside-nav"><ul>
+
+        <li><a class="anchor-link" href="#wrapper">header</a></li>
+        
+        <li><a class="anchor-link" href="#contact-anchor">contact</a></li>
+        
+        <li><a class="anchor-link" href="#terms-anchor">terms</a></li>
+        
+        <li><a class="anchor-link" href="#prices-anchor">prices</a></li>
+        
+        <li><a class="anchor-link" href="#how-to-anchor">how to commission</a></li>
+        
+        <li><a class="anchor-link" href="#cancel-anchor">cancellation</a></li>
+        
+        <li><a class="anchor-link" href="#faq-anchor">faq</a></li>
+
+    </ul></nav>
+
+</aside>
+
+<!-- contact section -->
+
+    
+    <div id="contact-anchor" style="height: 9rem;"></div>
+    <section id="contact">
+
+        <!-- contact section title -->
+
+        <h2>Contact</h2>
+        
+
+        <!-- social links
+        
+            find more icons at https://cappuccicons.com/
+
+        -->
+
+    <ul id="socials">
+        <li><a href=""><i class="cp cp-twitter"></i></a></li>
+        <li><a href=""><i class="cp cp-instagram"></i></a></li>
+        <li><a href=""><i class="cp cp-ko-fi"></i></a></li>
+        <li><a href=""><i class="cp cp-paypal"></i></a></li>
+    </ul>
+
+    <!-- contact buttons -->
+
+    <ul id="contact-buttons">
+
+        <a href=""><li><i class="cp cp-chat"></i>dm me</li></a>
+        
+        <a href=""><li><i class="cp cp-envelope"></i>email@gmail.com</li></a>
+        
+    </ul>
+    </section>
+
+    <!-- upper header end -->
+
+    <!-- terms section start -->
+
+    <div id="terms-anchor" style="height: 9rem;"></div>
+    <section id="terms">
+        
+        <!-- terms section title -->
+        <h2>terms</h2>
+
+        <article id="terms-text">
+
+            <!-- terms section text -->
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim dolorem iure eveniet quam officiis quasi distinctio deleniti omnis odit laboriosam officia est, hic explicabo? Dolorum inventore numquam nisi id ullam.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim dolorem iure eveniet quam officiis quasi distinctio deleniti omnis odit laboriosam officia est, hic explicabo? Dolorum inventore numquam nisi id ullam.</p>
+
+        </article>
+    
+        <!-- terms  numbered list -->
+        <ol class="terms-list">
+
+            <li>terms</li>
+            
+            <li>terms</li>
+            
+            <li>terms</li>
+        </ol>
+    
+        <!-- terms  bullet list -->
+        <ul class="terms-list">
+            <li>terms</li>
+            
+            <li>terms</li>
+            
+            <li>terms</li>
+        </ul>
+     
+        <!-- do's and don'ts start -->
+        <article id="do-donts">
+            
+            <div class="dos"><ul>
+                <li>yes</li>
+                <li>yes</li>
+                <li>yes</li>
+            </ul></div>
+
+            <div class="donts"><ul>
+                <li>no</li>
+                <li>no</li>
+                <li>no</li>
+            </ul></div>
+           
+
+        </article>
+
+    </section>
+    <!-- terms end -->
+
+</header>
+
+<main>
+
+
+    <!-- commission types and prices start. see templates below, add as many as you want! -->
+
+    <div id="prices-anchor" style="height: 9rem;"></div>
+    <section id="prices">
+
+
+        <!-- TEMPLATE: commission type example with image start -->
+
+        <article class="example">
+
+            <div class="example-info">
+
+                <!-- commission type name -->
+                <h3>sketch</h3>
+                
+                <!-- commission price -->
+                <div class="example-price">30$</div>
+
+            </div>
+
+            <!--  image-->
+            <figure class="example-image"><img src="IMAGE URL" alt="" class="example-image"></figure>
+
+            <!-- commission type info -->
+            <div class="example-type-info">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tempore?</p>
+            </div>
+
+        </article>
+                
+        <!-- TEMPLATE: price example with image end -->
+
+
+        <!-- TEMPLATE: price example without image start -->
+
+        <article class="example">
+
+            <div class="example-info">
+
+                <!-- commission type name -->
+                <h3>sketch</h3>
+                
+                <!-- commission price -->
+                <div class="example-price">30$</div>
+
+				<div class="example-type-info">
+                	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tempore?</p>
+	            </div>
+
+            </div>
+            
+
+
+        </article>
+        
+        <!-- TEMPLATE: price example without image end -->
+
+        <article class="example">
+
+            <div class="example-info">
+
+                <!-- commission type name -->
+                <h3>sketch</h3>
+                
+                <!-- commission price -->
+                <div class="example-price">30$</div>
+
+            </div>
+
+            <!--  image-->
+            <figure class="example-image"><img src="IMAGE URL" alt="" class="example-image"></figure>
+
+            <!-- commission type info -->
+            <div class="example-type-info">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, tempore?</p>
+            </div>
+
+        </article>
+
+
+
+
+    </section>
+    <!-- prices and examples end -->
+
+
+    <!-- how to commission section -->
+    
+    <div id="how-to-anchor" style="height: 9rem;"></div>
+    <section id="how-to">
+
+        <!-- how to commission title -->
+        <h2>How to commission</h2>
+
+        <!-- how to commission info -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, debitis earum numquam eos totam facilis modi architecto asperiores dicta, reprehenderit cumque excepturi nesciunt repudiandae voluptatem consequatur, soluta repellendus possimus! Quasi.</p>
+
+        <h3>subtitle</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, debitis earum numquam eos totam facilis modi architecto asperiores dicta, reprehenderit cumque excepturi nesciunt repudiandae voluptatem consequatur, soluta repellendus possimus! Quasi.</p>
+
+        <!-- how to commission steps bullet list-->
+        <ul>
+            <li>step one</li>
+            <li>step two</li>
+        </ul>
+
+        <!-- how to commission steps numbered list-->
+        <ol>
+            <li>step three</li>
+            <li>step four</li>
+        </ol>
+    </section>
+
+
+    <!-- cancelling section -->
+
+    <div id="cancel-anchor" style="height: 9rem;"></div>
+    <section id="cancel">
+        
+        <h2>How to cancel commissions/request for changes</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt provident ipsum at qui. Possimus saepe, facere qui quos dolor, in, placeat laudantium tempore ducimus repellendus repellat. Sapiente, maxime assumenda.</p>
+        
+        <h3>subtitle</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt provident ipsum at qui. Possimus saepe, facere qui quos dolor, in, placeat laudantium tempore ducimus repellendus repellat. Sapiente, maxime assumenda.</p>
+
+        <!-- bullet list -->
+        <ul>
+            <li>a</li>
+            <li>a</li>
+        </ul>
+        
+        <!-- numbered list -->
+        <ol>
+            <li>a</li>
+            <li>a</li>
+        </ol>
+        
+    </section>
+
+    <!-- faq section -->
+    
+    <div id="faq-anchor" style="height: 9rem;"></div>
+    <section id="faq">
+
+        <!-- faq section title -->
+        <h2>f.a.q</h2>
+
+        <!-- faq section text -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla, earum a amet voluptate eligendi ipsa quasi vero dolore quidem nisi nesciunt at libero numquam in tempora distinctio odio debitis!</p>
+
+        <h3>subtitle</h3>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nulla, earum a amet voluptate eligendi ipsa quasi vero dolore quidem nisi nesciunt at libero numquam in tempora distinctio odio debitis!</p>
+
+
+        <!-- question start -->
+
+        <article class="faq-line">
+            <div class="faq-question">
+                
+                <p>question</p>
+            
+            </div>
+
+            <div class="faq-answer">
+            
+                <p>answer</p>
+            
+            </div>
+        </article>
+
+        <!-- question end -->
+
+
+        
+        <!-- question start -->
+
+        <article class="faq-line">
+            <div class="faq-question">
+                
+                <p>question</p>
+            
+            </div>
+
+            <div class="faq-answer">
+            
+                <p>answer</p>
+            
+            </div>
+        </article>
+
+        <!-- question end -->
+
+    </section>
+
+        <iframe frameborder="0" scrolling="no" width="100%" height="190" src="https://www.tumblr.com/ask_form/{name}.tumblr.com" style="background-color: transparent; overflow: hidden; width: 100%; height: 190px;" id="ask_form" data-ruffle-polyfilled=""></iframe>
+
+</main>
+
+</section>
+<!-- wrapper end -->
+
+
+<footer id="last-update">
+	last updated: 02/07/2022
+</footer>
+
+<a href="#wrapper" class="anchor-link" id="to-top"><i class="fa-solid fa-chevron-up"></i></a>
+
+<!-- do not touch -->
+<div style="position:fixed;bottom:4rem;right:2rem;z-index:999999999999999999999!important;font-size:.7rem;letter-spacing:.03rem;"><a href="https://southcodes.tumblr.com" title="coded by southcodes" target="_blank">SC</a></div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<!-- icons fonts -->
+
+<!-- cappuccicons -->
+<script src="https://pull.cappuccicons.com/cpf.js"></script>
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function(){
+    $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 500) {$('#to-top').fadeIn();}
+    else {$('#to-top').fadeOut();}});
+
+    $('.anchor-link').click(function(){
+    $('html, body').animate({
+    scrollTop: $( $(this).attr('href') ).offset().top
+    }, 450); return false;});
+});
+</script>
+</body>
+</html>
