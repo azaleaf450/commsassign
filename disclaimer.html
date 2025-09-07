@@ -1,188 +1,341 @@
-	
-<!-----
-Page 01 - TOU Blues
-Theme by elliebean.co.vu.
-Do NOT remove credit
-Do NOT redistribute or claim as your own
-Please feel free to contact me with questions or bugs ~
-Originally intended for personal use, but I released it instead!
-------->
-    <html>
-    <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-     
-        <title>Terms of Use</title><!--- tab title ---> 
+<!-- 
+
+    faq page #1 'IGNORANCE' by skye southcodes.tumblr.com
+    modify as you please but please do not touch the credit
+    any errors? have questions? need help? feel free to contact me: southcodes.tumblr.com/inbox
+ 
+    - honeybee icons by https://honeybee.suiomi.com/
+    - normalize css by https://github.com/necolas
+    - fonts by google
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FAQ | {title}</title>
+
+    <meta name="viewport" content="width=device-width">
+ 
+    <link rel="shortcut icon" href="{favicon}">
+    <meta name="description" content="{MetaDescription}"/>
+    
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Montserrat:600" rel="stylesheet">
+    <!-- normalize css -->
+    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
+    <!-- honeybee icons --> <link rel="stylesheet" href="https://solrainha.github.io/honeybee/honeybee.css" >
+
+<style type="text/css">
+
+body, figure{margin: 0;padding: 0}
+html{font-size: 14px}
+body {font: 1rem 'Open Sans', sans-serif;color:#333}
+a {text-decoration: none;
+    color:#87b9e6;    /* links color */
+}
+a:hover {color:#36608c;     /* links hover color */
+}
+
+
+/*  header  */
+
+header {
+    width: 29%;
+    max-width: 17rem;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8rem 7rem 0 0;
+}
+
+h1{ 
+    font: 600 .9rem 'Montserrat', sans-serif;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    color: #87b9e6;    /* title color */
+    margin-bottom: 1.2rem
+}
+
+.himg {
+    width: 100%;
+    height: 4rem;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 1.2rem
+}
+
+#navi {
+    width: 16%;
+    display: inline-block;
+    vertical-align: top;
+    text-align:right;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-sizing: border-box;font-family: 'Montserrat', sans-serif
+}
+
+#navi ul li {margin-bottom: 1rem}
+
+#desc {
+    display: inline-block;
+    vertical-align: top;
+    width: 82%;
+    box-sizing: border-box;
+    padding: .8rem;
+    font-size: .9rem;
+    letter-spacing: .03rem;
+    text-align: justify;
+    line-height: 170%;
+    background: #fcfcfc;
+    border:1px solid #eee
+
+}
+/*  nav  */
+
+#navi ul,#navi li {list-style-type:none;margin:0;padding:0;}
+
+#inboxlink {
+    font: 400 .9rem 'Open Sans', sans-serif;
+    text-align: right;
+    font-style: italic;
+    letter-spacing: .03rem; line-height: 170%
+}
+
+main {
+    width: calc(69% - 7rem);
+    max-width: 35rem;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 3rem auto 0;
+}
+
+.qbox {
+    width: 100%;
+    margin: 4rem 0
+}
+
+.q {
+
+    background: #edf5fc; /* question background color */
+
+padding: 1rem;margin-bottom: 2rem;position: relative;border:1px solid lightblue;font-size: 1.1rem;font-weight: 600;line-height: 180%;}
+
+.q:before {
+    content: '';
+    background: #ddd;
+    width: 1px;
+    height: 5rem;
+    position: absolute;
+    bottom:-2rem;
+    left:50%;
+    z-index: -1
+}
+
+.q:after {
+    content: '\eb30';
+    font-family:'honeybee';
+    color: #badaf7;    /* question mark symbol color */
+    background: white;
+    font-size: 3rem;
+    border-radius: 100%;
+    position: absolute;
+    right: -1.5rem;top: -1rem;
+}
+
+.ans {
+    
+    background: #fafafa; /* answer background color */
+
+padding: 1rem;border:1px solid #ddd;font-size: .9rem;letter-spacing: .03rem;line-height: 180%}
+
+/* inbox */
+
+#inbox {margin-bottom: 3rem}
+
+#inboxnote {
+    padding:0 1rem;
+    letter-spacing: .03rem;
+    line-height: 170%;
+    background: #fcfcfc;
+    border:1px solid #eee;}
+
+#inboxtitle {font: 600 1.1rem 'Montserrat', sans-serif;text-align: center;}
+
+/* DONT TOUCH */
+#sc {z-index:9999;position:fixed;bottom:1.5rem;right:2rem;line-height:0%;padding:1rem .5rem;font-size:.8rem;background:white;font-family:'Open Sans', sans-serif;color:#777;}
+
+/* MEDIA */
+
+@media only screen and (min-width:0px) and (max-width:740px) {
+
+
+    header,#desc,#navi {
+        width: 100%;
+        display: block;
+        max-width: 30rem;
+        margin:1rem auto;
+    }
+
+ 
+    header {
+        margin: 7rem auto
+    }
+
+    #navi ul li {
+        display: inline-block;
+        margin: 0 .8rem
+    }
+
+    main {
+        width: 100%;
+        max-width: 40rem;
+        margin: 4rem auto;
+        display: block
+    }
+
+}
+</style>
+    
+</head>
+<body>
+
+    <div style="margin: 0 auto;width: 90%;max-width:65rem">
+
+<header>
+
+    <h1>
+        frequently asked questions
+    </h1>
+
+    <img class="himg" src="SIDEBAR IMAGE LINK"/>
+
+    <article id="desc">
+
+        description goes here
+
+    </article>
+
+    <nav id="navi"><ul>
+        <li><a href="LINK URL" title="LINK NAME 1">.O1</a></li>
         
-        <link rel="shortcut icon" href="{Favicon}">
-        <link rel="altertnate" type="application/rss+xml" href="{RSS}">
-        <meta name="description" content="" />
-        <meta http-equiv="x-dns-prefetch-control" content="off"/>
-       
-     
-    <style type="text/css">
+        <li><a href="LINK URL" title="LINK NAME 2">.O2</a></li>
+        
+        <li><a href="LINK URL" title="LINK NAME 3">.O3</a></li>
+        
+        <li><a href="LINK URL" title="LINK NAME 4">.O4</a></li>
+    </ul></nav>
+
+    <p id="inboxlink">
+        <a href="#inbox" class="achl">
+            
+            Is your question not answered here?
+            <br>
+            Send me an ask!
+
+        </a></p>
+
+</header>
+
+
+
+<main>
+
+<!-- 
     
-    body {
-	font-size: 15px;
-	font-family: Calibri, Candara, Segoe;
-	color: white;
-	background-color: #fff;/* background colour */
-	background-image:url('http://media.tumblr.com/877d3cd504e50f27b2395114345f535c/tumblr_inline_myyrfigahU1r275lx.png'); /* background image */
-    }
-    
-    a{
-        color:black;
-        text-decoration:none;
-    }
-    
-.econtainer {
-    background-color:#4e4e68;/* container background */
-    margin:auto;
-    width:500px;
-    padding:10px;
-    margin-top:20px;
-}
+        QUESTION AND ANSWER TEMPLATE:
 
-.econtainer li
-   {list-style: square;
-       size:2px;
-   }
+         <article class="qbox">
+            <div class="q">
+                question
+            </div>
+
+            <div class="ans">
+                answer
+            </div>
+        </article>
 
 
-.esmallhead{
-    width:100%;
-    font-size:17px;
-    padding:2px;
-    padding-left:2px;
-    background-color:#7dc9d1; /* header colour*/
-    margin-left:-3px;
-    text-align:center;
-}
+ -->
+        
+        <article class="qbox">
+            <div class="q">
+                question example 1
+            </div>
 
-.eheadlinks {
-    float:left;
-    width:30px;
-    height:15px;
-    padding:2px;
-    background-color:#ecf1f3; /* link colours */
-    font-size:12px;
-    color:black;
-    text-align:right;
-    margin-top:5px;
-    
-    -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
-
-.eheadlinks:hover {
-    width:35px;
-    text-align:right;
-    background-color:#f2c074; /* link hover colours */
-    -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
-
-.eheadcredit {
-    float:left;
-    width:40px;
-    height:15px;
-    padding:2px;
-    background-color:#ecf1f3; /* link hover colour */
-    font-size:12px;
-    color:black;
-    text-align:right;
-    margin-top:5px;
-    
-    -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
-
-.eheadcredit:hover {
-    width:45px;
-    text-align:right;
-    background-color:#f2c074; /* link colour hover */
-    -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
-
-.eheadlinkscontainer {
-    margin:auto;
-    float:right;
-    height:100px;
-    width:50px;
-    margin-right:-60px;
-    margin-top:0px;
-}
-
-.eagreebox {
-    width:85px;
-    height:25px;
-    text-align:center;
-    background-color:#ecf1f3; /* button colour */
-    margin:auto;
-    color:black; /* button text colour */
-    text-transform:uppercase;
-    font-size:20px;
-        -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
-
-.eagreebox:hover {
-    background-color:#f2c074; /* button colour hover */
-    -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-            -moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-}
+            <div class="ans">
+                answer example 1
+            </div>
+        </article>
 
 
-    </style>  
-    </head>
-     <body>
-     
-     
-     
-             
+        
+        <article class="qbox">
+            <div class="q">
+                question example 2
+            </div>
 
-     <div class="econtainer">
-     <div class="eheadlinkscontainer">
-     <!-- links -->
-       <div class="eheadlinks"><a href="/">back</a></div> 
-       <div class="eheadlinks"><a href="/ask">ask</a></div>
-       <div class="eheadlinks"><a href="">link</a></div>
-       <div class="eheadlinks"><a href="">link</a></div>
-        <div class="eheadcredit"><a href="http://elliebean.co.vu/">theme</a>
-            <!---end links---->
-        </div>   
-       </div>
-     <div class="esmallhead">
-     <!--- Title --->
-     Terms Of Use
-     </div>
-     
- <p>
- <!---- Text --->
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique sapien eu lacus aliquet, nec accumsan purus feugiat. Nullam massa turpis, lacinia nec ligula id, tincidunt tincidunt eros. Vivamus velit purus, mattis at rhoncus non, tempus non felis. Nullam fringilla magna vitae lectus consectetur congue. Praesent ultrices erat a lacus consequat euismod. Vestibulum semper fringilla erat at tristique. Duis felis ante, tempus sed neque ac, porta euismod magna.
+            <div class="ans">
+                answer example 2
+            </div>
+        </article>
 
-Phasellus facilisis nisl in nisi condimentum sollicitudin. Donec risus purus, rutrum ut fringilla vel, fringilla nec dolor. Nullam rutrum quam quis scelerisque dapibus. Integer ultrices justo vitae odio pellentesque blandit. Quisque tincidunt erat ac pellentesque sollicitudin. Sed mollis quam diam, quis porta nunc rutrum sit amet. Cras pellentesque lectus vel sapien aliquet dapibus. Praesent sed ante sed tortor hendrerit tincidunt sed a elit. In tincidunt porta adipiscing. Quisque tempus lectus at dui scelerisque, viverra mollis magna mollis. 
-<!--- end of text ---->
-</p>
 
-<div class="eagreebox"><!--- button ---> <a href="">I agree</a>  </div>
-     </div>
-     
-   
-    </body>
-    </html>
+
+        
+        <article class="qbox">
+            <div class="q">
+                question example 3
+            </div>
+
+            <div class="ans">
+                answer example 3
+            </div>
+        </article>
+
+
+<!-- this is the inbox at the end of the page, if you dont want it, delete everything up until 'end of inbox' -->
+
+        <article id="inbox">
+
+            <div id="inboxnote">
+                
+                <!-- here goes the text on top of the inbox box. if you don't want it, delete from '<div id="inboxnote">' above, until 'end of inbox note'
+                
+                please wrap your paragraph between <p> and </p> -->
+
+                <h2 id="inboxtitle">
+                    Inbox note title
+                </h2>
+
+                <p>Here you can write guideliness, rules, notes, or add whatever you'd like </p>
+
+                <p>Another paragraph</p>
+
+            </div>      <!-- end of inbox note -->
+
+            <iframe id="ask_form" style="background-color: transparent; overflow: hidden;" src="http://www.tumblr.com/ask_form/{name}.tumblr.com" frameborder="0" scrolling="no" width="100%" height="200"> </iframe>
+        </article>  <!-- end of inbox  -->
+
+</main>
+
+</div>
+
+
+<!-- DON'T TOUCH -->
+<a id="sc" href="https://southcodes.tumblr.com" target="_blank" title="southcodes">SC</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+    $('.achl').click(function(){
+    $('html, body').animate({
+    scrollTop: $( $(this).attr('href') ).offset().top
+    }, 450); return false;});
+})
+</script>
+</body>
+</html>
