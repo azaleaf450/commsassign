@@ -10,20 +10,20 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- change the title that appears in the browser tab here -->
-    <title>FAQ Page</title>
+    <title>Disclaimer</title>
     <style>
       /** Customize all of your options here! **/
       :root {
-        --background: #201b33;
+        --background: #68417f;
         --text: #000;
         --spacing: 1rem; /* this is 16px */
         --question: #cbb2ed;
-        --answer: #fbab97;
+        --answer: #EACCF0;
         /* if you do not want a gradient, make these the same color as  their base variable (so question-gradient would be var(--question) */
         --question-gradient: #c7b5e0;
-        --answer-gradient: #f9c98e;
+        --answer-gradient: #EACCF0;
         --border-radius: 10px;
-        --blockquote-border: #b86c53;
+        --blockquote-border: #F6B9F7;
         --blockquote: #f09889bf;
         --blockquote-gradient: var(--answer-gradient);
         --link: var(--background);
@@ -323,7 +323,7 @@
 
       footer:hover:before,
       footer:hover:after {
-        background: #ffe34e;
+        background: #F6B9F7;
       }
 
       footer a {
@@ -393,14 +393,13 @@
           </svg>
 
           <!-- all of your FAQ links will be here. Make sure the href value is the same as the id of your question. I used numerical order to keep it easy to keep track of -->
-          <a href="#first">First Question</a>
-          <a href="#second">Second Question?</a>
-          <a href="#third">Third Question?</a>
-          <a href="#fourth">Fourth Question?</a>
+          <a href="#first">What?</a>
+          <a href="#second">Who?</a>
+          <a href="#third">When?</a>
         </div>
         <div class="back">
           <a href="">back to the top</a>
-          <a href="/">back home</a>
+          <a href="https://azaleaf450.github.io/commsassign/index.html">back home</a>
         </div>
       </aside>
       <section>
@@ -414,14 +413,10 @@
           </svg>
           <!-- Your question -->
           <div class="question">
-            Question one?
+            What is this?
           </div>
           <div class="answer">
-            Sample answer!
-            <p>
-              You can add any HTML you want, or you can just put text.
-              <a href="/" target="_blank">Link example (opens in a new tab)</a>
-            </p>
+            This is a web presence for a university assignment. If you're unlucky enough to stumble across this, this is not a real website.
           </div>
         </article>
         <!-- use this to include a divider between questions -->
@@ -436,14 +431,28 @@
           </svg>
           <!-- question -->
           <div class="question">
-            Question two?
+            Who?
           </div>
           <div class="answer">
-            Answer two!
-            <blockquote>
-              Blockquote sample.
-            </blockquote>
+           Just a persona for an assignment.
           </div>
+        </article>
+
+        <hr />
+
+          <article id="third">
+             <!-- star icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <path
+              d="M309.5-18.9c-4.1-8-12.4-13.1-21.4-13.1s-17.3 5.1-21.4 13.1L193.1 125.3 33.2 150.7c-8.9 1.4-16.3 7.7-19.1 16.3s-.5 18 5.8 24.4l114.4 114.5-25.2 159.9c-1.4 8.9 2.3 17.9 9.6 23.2s16.9 6.1 25 2L288.1 417.6 432.4 491c8 4.1 17.7 3.3 25-2s11-14.2 9.6-23.2L441.7 305.9 556.1 191.4c6.4-6.4 8.6-15.8 5.8-24.4s-10.1-14.9-19.1-16.3L383 125.3 309.5-18.9z"
+            />
+          </svg>
+          <div class="question">
+              When?
+            </div>
+            <div class="answer">
+              Just for a little while. This whole thing will be nuked as soon as grades are released.
+            </div>
         </article>
 
         <!-- to add a new question, copy and paste this template after this comment 
